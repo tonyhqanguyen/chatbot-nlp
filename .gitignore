@@ -108,17 +108,17 @@ chatbot0603-firebase-adminsdk-fvju5-d1aa135919.json
 
 # word2vec training model
 wiki-news-300d-1M.vec
-./text
-./text-phrases
-./text.bin
-./words.txt
-./slangs.txt
+text
+text-phrases
+text.bin
+words.txt
+slangs.txt
 
 # word corrector
-./big.txt
+big.txt
 
 # not used stuff
-./Intentions.py
-./edit_distance.py
-./pos.py
-./test.py
+Intentions.py
+edit_distance.py
+pos.py
+test.py
