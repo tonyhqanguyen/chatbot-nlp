@@ -1,0 +1,32 @@
+Å´transitions⁄í[
+  {
+    "clas":0,
+    "move":1,
+    "label":"KEYWORD",
+    "name":"B-KEYWORD"
+  },
+  {
+    "clas":1,
+    "move":2,
+    "label":"KEYWORD",
+    "name":"I-KEYWORD"
+  },
+  {
+    "clas":2,
+    "move":3,
+    "label":"KEYWORD",
+    "name":"L-KEYWORD"
+  },
+  {
+    "clas":3,
+    "move":4,
+    "label":"KEYWORD",
+    "name":"U-KEYWORD"
+  },
+  {
+    "clas":4,
+    "move":5,
+    "label":"",
+    "name":"O"
+  }
+]

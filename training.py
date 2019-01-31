@@ -263,6 +263,7 @@ def extract_features(sentence: str) -> ndarray:
 
     # features = [num_pronouns, num_corconj, num_pastverb, num_futureverb, num_commas, num_multipunc, num_common_nouns,
     #             num_proper_nouns, num_adv, num_wh, num_slangs, num_uppercase, avg_token_length, sentence_size,
+    #             sentence_vector]
 
     return array(sentence_vector)
 

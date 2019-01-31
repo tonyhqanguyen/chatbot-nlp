@@ -2,8 +2,7 @@ import word2vec
 import numpy
 import spacy
 
-model = word2vec.load("text.bin")
-print(model["food"].shape, model["chinese"].shape)
+model = word2vec.load("/Users/tonynguyen/Desktop/ML/chatbot-nlp/text.bin")
 nlp = spacy.load('en_core_web_sm')
 
 
@@ -18,7 +17,7 @@ def sentence2vec(sentence: str) -> numpy.ndarray:
             vec = model[token.text.lower()]
             vecs.append(vec)
         except KeyError as e:
-            print(f"{token.text.lower()} not in model!")
+            vecs.append([0 for _ in range(100)])
 
     total_vector = vecs[0] if vecs else None
 
