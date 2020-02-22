@@ -1,4 +1,4 @@
-sklearn==0.21.3
+sklearn
 flask
 gunicorn
 spacy
