@@ -1,5 +1,5 @@
 sklearn
 flask
 gunicorn
-cython
+Cython
 word2vec
