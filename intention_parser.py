@@ -1,6 +1,6 @@
 from vector_rep import sentence2vec
 from sklearn.externals import joblib
-from app import *
+from app_utils import get_inputs
 from flask import jsonify
 
 classifier = joblib.load("intentions.pkl", "r")
@@ -16,7 +16,6 @@ def predict(message: str) -> str:
     return legend[prediction]
 
 
-@app.route("/intention", methods=["POST"])
 def get_intention():
     inputs = get_inputs()
     response = {
