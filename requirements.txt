@@ -1,5 +1,3 @@
 sklearn
 flask
 gunicorn
-Cython
-word2vec

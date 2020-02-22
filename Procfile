@@ -1,1 +1,1 @@
-web: python -m flask run
+web: chmod u+x start.sh && start.sh
