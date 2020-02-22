@@ -1,9 +1,10 @@
-import word2vec
+import json
 import numpy as np
 import spacy
 
 
-model = word2vec.load("word2vec.bin")
+indices = json.load(open("indices.json"))
+vecs = np.load("word2vec.npy")
 nlp = spacy.load('en_core_web_sm')
 
 
@@ -14,7 +15,8 @@ def sentence2vec(sentence):
     total_vector = np.zeros(100)
     tokenizer = nlp(sentence)
     for word in tokenizer:
-        if word.text.lower() in model:
-            total_vector.__iadd__(model[word.text.lower()])
+        if word.text.lower() in indices:
+            index = indices[word.text.lower()]
+            total_vector.__iadd__(vecs[index])
 
     return total_vector
