@@ -2,7 +2,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate("/Users/tonynguyen/Desktop/ML/chatbot-nlp/chatbot0603-firebase-adminsdk-fvju5-d1aa135919.json")
+cred = credentials.Certificate("apikey.json")
 default_app = firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://chatbot0603.firebaseio.com/'
 })
