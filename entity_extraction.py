@@ -2,9 +2,10 @@ import spacy
 from app_utils import get_inputs
 from flask import jsonify
 import json
+import en_core_web_sm
 
 
-nlp = spacy.load("en_core_web_sm")
+nlp = en_core_web_sm.load()
 nlp2 = spacy.load('entity_recognizer')
 
 
