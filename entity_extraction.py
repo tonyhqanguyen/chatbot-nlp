@@ -14,8 +14,6 @@ def get_entity():
     if not doc.ents:
         doc = nlp2(sentence)
 
-    response = {
-        "entities": list(doc.ents)
-    }
+    response = "{entities: " + str(list(doc.ents)) + "}"
 
-    return jsonify(str(response)), 200
+    return jsonify(response), 200
