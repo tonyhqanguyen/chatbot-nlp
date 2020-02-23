@@ -1,6 +1,7 @@
 import spacy
 from app_utils import get_inputs
 from flask import jsonify
+import json
 
 
 nlp = spacy.load("en_core_web_sm")
@@ -14,6 +15,8 @@ def get_entity():
     if not doc.ents:
         doc = nlp2(sentence)
 
-    response = "{entities: " + str(list(doc.ents)) + "}"
+    response = {
+        "entities": list(doc.ents)
+    }
 
-    return jsonify(response), 200
+    return jsonify(json.dumps(response)), 200
